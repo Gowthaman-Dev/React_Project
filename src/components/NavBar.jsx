@@ -13,7 +13,8 @@ const NavBar = () => {
           <Link className="linklist" to="/about">Cast</Link>
           <Link className="linklist" to="/product">Story</Link>
           <Link className="linklist" to="/service">Songs</Link>
-          <Link className="linklist" to="/trailer">Trailer</Link>
+          <Link className="linklist" to="/button">Button</Link>
+          <Link className="linklist" to="/tailwind">TailWind</Link>
         </div>
       </div>
     </>

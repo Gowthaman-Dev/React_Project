@@ -4,6 +4,7 @@ import three from '../assets/images/c.jpg'
 import { useState } from "react";
 
 const Service = () => {
+
   // 1️⃣ Multiple Strings
   const [title, setTitle] = useState("KGF");
   const [hero, setHero] = useState("Yash");
@@ -24,15 +25,15 @@ const Service = () => {
   const [isReleased, setIsReleased] = useState(true);
   const [isHit, setIsHit] = useState(false);
 
-  // 5️⃣ Arrays (4 times)
+  // 5️⃣ Arrays
   const [songs, setSongs] = useState(["Sultan", "Garuda", "Dheera", "Jokae"]);
   const [villains, setVillains] = useState(["Garuda", "Adheera", "Guru"]);
   const [languages, setLanguages] = useState(["Kannada", "Tamil", "Telugu", "Hindi"]);
   const [collection, setCollection] = useState([100, 200, 300, 500]);
 
-  // 6️⃣ Objects (3 times) with Images
+  // 6️⃣ Objects with Images
   const [poster, setPoster] = useState({
-    img: {one},
+    img: one,
     alt: "KGF Poster",
   });
 
@@ -55,27 +56,35 @@ const Service = () => {
 
   return (
     <>
-      <h1>{title} - {year}</h1>
-      <p>Hero: {hero}</p>
-      <p>Director: {director}</p>
-      <p>Genre: {genre}</p>
-      <p>Released: {isReleased ? "Yes" : "No"}</p>
-      <p>Selected Actor: {selectedActor ?? "Nothing Selected"}</p>
+      <div className="service-container">
 
-      <h2>Songs List:</h2>
-      <ul>
-        {songs.map((s, i) => <li key={i}>{s}</li>)}
-      </ul>
+        <h1 className="service-title">{title} - {year}</h1>
 
-      <h2>Cast:</h2>
-      {cast.map((c, i) => (
-        <div key={i}>
-          <h3>{c.name} - {c.role}</h3>
-          <img src={c.img} width="80" />
-        </div>
-      ))}
+        <p className="service-text">Hero: {hero}</p>
+        <p className="service-text">Director: {director}</p>
+        <p className="service-text">Genre: {genre}</p>
+        <p className="service-text">Released: {isReleased ? "Yes" : "No"}</p>
+        <p className="service-text">Selected Actor: {selectedActor ?? "Nothing Selected"}</p>
+
+        <h2 className="section-heading">Songs List</h2>
+        <ul className="song-list">
+          {songs.map((s, i) => <li key={i}>{s}</li>)}
+        </ul>
+
+        <h2 className="section-heading">Cast</h2>
+        {cast.map((c, i) => (
+          <div key={i} className="cast-card">
+            <img src={c.img} />
+            <div>
+              <div className="cast-name">{c.name}</div>
+              <div className="cast-role">{c.role}</div>
+            </div>
+          </div>
+        ))}
+
+      </div>
     </>
   );
-};
+}
 
 export default Service;

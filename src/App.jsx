@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage"
 import Crew from "./components/Crew"
 import Ticket from "./components/Ticket"
 import Service from "./components/Service"
+import Button from "./components/Button"
+import Taliwind from "./components/Taliwind"
 const App =()=>{
   return (
     <>
@@ -16,6 +18,8 @@ const App =()=>{
         <Route path="/about" element={<Crew/>}/>
         <Route path="/product" element={<Ticket/>}/>
         <Route path="/service" element={<Service/>}/>
+        <Route path="/button" element={<Button/>}/>
+        <Route path="/tailwind" element={<Taliwind/>}/>
       </Routes>
     
     </>
