@@ -15,6 +15,10 @@ const NavBar = () => {
           <Link className="linklist" to="/service">Songs</Link>
           <Link className="linklist" to="/button">Button</Link>
           <Link className="linklist" to="/tailwind">TailWind</Link>
+          <Link className="linklist" to="/event">Event</Link>
+          <Link className="linklist" to="/state">TomAndJerry</Link>
+          <Link className="linklist" to="/circle">Circle</Link>
+          <Link className="linklist" to="/paratice">5 Ternary</Link>
         </div>
       </div>
     </>
