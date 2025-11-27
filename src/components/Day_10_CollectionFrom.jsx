@@ -2,24 +2,35 @@ import React, { useState } from 'react'
 
 const Day_10_CollectionFrom = () => {
 
-    const [name,setName]= useState("")
-
-    const [email,setemail] = useState("")
-
-    const [number,setnumber] = useState("")
+    const [data,setData]= useState({name:"",email:"",number:""})
+    
+    
 
     const datachange =(e)=>{
 
-        setName(e.target.value)
-        setemail(e.target.value)
-        setnumber(e.target.value)
+       setData({...data,[e.target.name]:e.target.value})
 
-        const data = {name,email,number}
-        console.log(data);
-        
+    }
+   
+    
+
+    const dataclick =(e)=>{
+      e.preventDefault()
+
+      
+
+      const changedata = JSON.stringify(data)
+
+      localStorage.setItem("userdatas",changedata)
+       console.log(changedata);
+     alert("Welcome to Gowtham Webpage ")  
+
+     setData({fullName:"",email:"",Number:""})
 
     }
 
+    
+    
   return (
     <>
     
@@ -28,19 +39,19 @@ const Day_10_CollectionFrom = () => {
          <form className='flex flex-col gap-3 justify-center items-center bg-amber-100 p-3 rounded-2xl'>
             <div>
                  <label>Enter the name</label>
-      <input type="text" onChange={datachange}   className='bg-gray-600 mx-6 text-white p-1 rounded' placeholder='enter name' />
+      <input type="text" name="fullName" value={data.fullName} onChange={datachange}   className='bg-gray-600 mx-6 text-white p-1 rounded' placeholder='enter name' />
             </div>
       <div>
          <label>Enter the Eamil</label>
-      <input type="email" onChange={datachange}   className='bg-gray-600 mx-6 text-white p-1 rounded' placeholder='enter email' />
+      <input type="email" name='email' value={data.email} onChange={datachange}   className='bg-gray-600 mx-6 text-white p-1 rounded' placeholder='enter email' />
       </div>
       <div>
          <label>Enter the Number</label>
-      <input type="number"  onChange={datachange} className='bg-gray-600 mx-6 text-white p-1 rounded' placeholder='enter number' />
+      <input type="number" name='Number' value={data.Number} onChange={datachange} className='bg-gray-600 mx-6 text-white p-1 rounded' placeholder='enter number' />
       </div>
 
       <div>
-        <button>Register</button>
+        <button className='bg-gray-950 text-white rounded  p-2' onClick={dataclick}>Register</button>
       </div>
     </form>
     </div>

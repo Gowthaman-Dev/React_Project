@@ -24,6 +24,7 @@ const NavBar = () => {
           <Link className="linklist" to="/child">Props child</Link>
           <Link className="linklist" to="/day10">Day 10</Link>
           <Link className="linklist" to="/form">Day_10_CollectionFrom</Link>
+          <Link className="linklist" to="/show">Day_10_showdatas</Link>
         </div>
       </div>
     </>

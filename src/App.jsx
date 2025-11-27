@@ -16,6 +16,7 @@ import Props_Parent from "./components/Props_Parent"
 import Props_Child from "./components/Props_Child"
 import Day_10 from "./components/Day_10"
 import Day_10_CollectionFrom from "./components/Day_10_CollectionFrom"
+import Day_10_showdatas from "./components/Day_10_showdatas"
 
 
 const App =()=>{
@@ -40,6 +41,7 @@ const App =()=>{
         <Route path="/child" element={<Props_Child/>}/>
         <Route path="/day10" element={<Day_10/>}/>
         <Route path="/form" element={<Day_10_CollectionFrom/>}/>
+        <Route path="/show" element={<Day_10_showdatas/>}/>
       </Routes>
     
     </>
