@@ -19,6 +19,11 @@ const NavBar = () => {
           <Link className="linklist" to="/state">TomAndJerry</Link>
           <Link className="linklist" to="/circle">Circle</Link>
           <Link className="linklist" to="/paratice">5 Ternary</Link>
+          <Link className="linklist" to="/day8">Day 8</Link>
+          <Link className="linklist" to="/parent">Props Parent</Link>
+          <Link className="linklist" to="/child">Props child</Link>
+          <Link className="linklist" to="/day10">Day 10</Link>
+          <Link className="linklist" to="/form">Day_10_CollectionFrom</Link>
         </div>
       </div>
     </>

@@ -11,6 +11,13 @@ import Events from "./components/Events"
 import Stateprocess from "./components/TomAndJerry"
 import Circle from "./components/circle"
 import Pratices from "./components/pratices"
+import Day_8 from "./components/Day_8"
+import Props_Parent from "./components/Props_Parent"
+import Props_Child from "./components/Props_Child"
+import Day_10 from "./components/Day_10"
+import Day_10_CollectionFrom from "./components/Day_10_CollectionFrom"
+
+
 const App =()=>{
   return (
     <>
@@ -28,6 +35,11 @@ const App =()=>{
         <Route path="/state" element={<Stateprocess/>}/>
         <Route path="/circle" element={<Circle/>}/>
         <Route path="/paratice" element={<Pratices/>}/>
+        <Route path="/day8" element={<Day_8/>} />
+        <Route path="/parent" element={<Props_Parent/>}  />
+        <Route path="/child" element={<Props_Child/>}/>
+        <Route path="/day10" element={<Day_10/>}/>
+        <Route path="/form" element={<Day_10_CollectionFrom/>}/>
       </Routes>
     
     </>

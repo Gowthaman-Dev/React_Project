@@ -19,7 +19,6 @@ const Banner = () => {
         {/* Movie Info */}
         <div className="banner-content">
           <h1 className="movie-title">KGF CHAPTER 2</h1>
-
           <p className="movie-tagline">🔥 THE WORLD HAS A NEW POWER! 🔥</p>
 
           <p className="movie-desc">
@@ -35,6 +34,11 @@ const Banner = () => {
             <p><strong>⭐ Director:</strong> Prashanth Neel</p>
             <p><strong>⭐ Release Year:</strong> 2022</p>
             <p><strong>⭐ Box Office:</strong> ₹1200+ Crores Worldwide</p>
+            <p><strong>🎬 Genre:</strong> Action • Drama • Thriller</p>
+            <p><strong>⏱ Runtime:</strong> 168 minutes</p>
+            <p><strong>🌍 Language:</strong> Kannada (Dubbed in Hindi, Tamil, Telugu, Malayalam)</p>
+            <p><strong>🏆 Awards:</strong> National Film Award for Best Popular Film</p>
+            <p><strong>⭐ IMDb Rating:</strong> 8.4/10</p>
           </div>
 
           <button className="watch-btn">🎥 Watch Trailer</button>
